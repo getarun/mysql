@@ -15,9 +15,9 @@ Either delete the whole db and restart ``rm /var/lib/mysql/ibdata1``
 ``rm -fdr /var/lib/mysql``
 
 ``mkdir /var/lib/mysql \
-chown -R mysql:mysql /usr/local/var \
+chown -R mysql:mysql /var/lib/mysql \
 /usr/local/bin/mysql_install_db \
-chown -R mysql:mysql /usr/local/var``
+chown -R mysql:mysql /var/lib/mysql``
 
 ``mysql -uroot --compress < /home/pi/alldb-recovery.sql``
 
