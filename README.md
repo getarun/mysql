@@ -1,4 +1,3 @@
-# mysql
 In case of broken databases (InnoDB engine) try:
 
 Either delete the whole db and restart ``rm /var/lib/mysql/ibdata1``
