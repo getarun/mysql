@@ -4,7 +4,7 @@ Either delete the whole db and restart ``rm /var/lib/mysql/ibdata1``
 
 #OR
 
-``mysql --innodb_force_recovery=1 `` /*+1 if it fails #http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html#
+``mysql --innodb_force_recovery=1 `` /*+1 if it fails ... wird in 5.5.44 nicht erkannt #http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html#
 
 ``mysqlcheck --all-databases``
 
@@ -22,3 +22,7 @@ chown -R mysql:mysql /var/lib/mysql``
 ``mysql -uroot --compress < /home/pi/alldb-recovery.sql``
 
 ``/usr/local/bin/mysqladmin -uroot flush-privileges ``
+
+#OR
+
+http://www.tecmint.com/mysqladmin-commands-for-database-administration-in-linux/
