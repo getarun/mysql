@@ -25,4 +25,20 @@ chown -R mysql:mysql /var/lib/mysql``
 
 #OR
 
+``sudo /etc/init.d/mysql status`
+
+``sudo /etc/init.d/mysql stop`
+
+``sudo cp -r /var/lib/mysql /home/pi/sicherung/mysql``
+
+``sudo rm -r /var/lib/mysql/klima_growbox``
+
+``sudo rm  /var/lib/mysql/ibdata``
+
+``sudo rm  /var/lib/mysql/ib_logfile0``
+
+``sudo rm  /var/lib/mysql/ib_logfile1``
+
+``sudo /etc/init.d/mysql start`
+
 http://www.tecmint.com/mysqladmin-commands-for-database-administration-in-linux/
