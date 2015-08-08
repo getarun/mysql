@@ -1,0 +1,13 @@
+select * from mysql.user;
+
+DROP USER pi@'localhost';
+DROP DATABASE klima_growbox;
+
+CREATE USER 'pi'@'localhost' IDENTIFIED BY 'pi';
+CREATE DATABASE IF NOT EXISTS klima_growbox CHARACTER SET=utf8;
+CREATE TABLE IF NOT EXISTS klima_growbox.daten (timestamp REAL, date DATETIME, temp1 REAL, temp2 REAL, temp3 REAL, rh1 REAL, rh2 REAL, rh3 REAL, tmax REAL, tmin REAL, absdraussen REAL, absdrinnen REAL) CHARACTER SET=utf8;
+
+GRANT ALL PRIVILEGES on klima_growbox.daten TO 'pi'@'localhost';
+FLUSH PRIVILEGES;
+	
+SHOW GRANTS FOR 'pi'@'localhost';
